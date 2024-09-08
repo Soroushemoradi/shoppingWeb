@@ -1,0 +1,19 @@
+.p-header{
+    text-justify: auto;
+}
+.item-body{
+    background-color: rgb(204, 204, 204);
+}
+.image{
+    object-fit: cover;
+}
+.link1{
+    text-decoration: none;
+}
+li.bread :hover {
+    font-size: 18pt;
+    transition: 500ms;
+}
+.crumbDiv{
+    height: 30px;
+}

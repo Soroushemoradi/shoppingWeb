@@ -1,0 +1,14 @@
+
+.grid-3{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.container{
+    font-size: 15pt;
+}
+.grid3{
+    display: grid !important;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+}
