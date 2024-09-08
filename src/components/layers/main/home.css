@@ -17,3 +17,12 @@ li.bread :hover {
 .crumbDiv{
     height: 30px;
 }
+.stools-image{
+    object-fit: cover;
+}
+.btn{
+    background-color: #ebebeb;
+}
+button.btn:hover {
+    background-color: #b9b9b9;
+  }

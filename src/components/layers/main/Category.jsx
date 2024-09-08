@@ -23,7 +23,7 @@ function Category() {
                         <div className='btn'>view collection<FontAwesomeIcon className='ms-3' icon={faArrowRight} /></div>
                     </div>
                     <div>
-                        <img src="stool.jpg" alt="pic" className='h-100 w-100' />
+                        <img src="stool.jpg" alt="pic" className='h-100 w-100 stools-image' />
                     </div>
                 </div><div className="d-flex item-body rounded">
                     <div>

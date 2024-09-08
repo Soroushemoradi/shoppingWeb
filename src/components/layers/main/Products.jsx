@@ -37,7 +37,7 @@ function Products() {
     ]
     return (
         <>
-            <h3 className="mt-5  mb-5  text-center">shop by categories</h3>
+            <h3 className="mt-5  mb-3  text-center">shop by categories</h3>
             <Crumb/>
             <div className="grid-3 mt-5">
                 {pruds.map(({ image, discriotion, price }) => <><div className="mb-5"><Link className="link1" to={"/gallery"}>
@@ -54,8 +54,8 @@ function Products() {
 
 
             </div>
-            <div className="grid-3">
-
+            <div className="text-center mb-5">
+            <button className="btn rounded-4 border border-dark btn-prud">view all products</button>
             </div>
         </>
     )
