@@ -1,6 +1,9 @@
 .btn-prud {
     background-color: #ebebeb;
 }
+button.btn-prud:hover {
+    background-color: #b9b9b9;
+}
 .image {
     object-fit: cover;
 }

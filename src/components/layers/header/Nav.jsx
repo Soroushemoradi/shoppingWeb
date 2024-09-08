@@ -28,7 +28,7 @@ function Navigation() {
           </div>
           <div>
             <Form inline className='d-flex'>
-              <button type='button' className='w-25 btn' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+              <button type='button' className='w-25 btn btn-search' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
               {search &&
                 <Form.Control
                   type="text"

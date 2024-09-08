@@ -1,6 +1,6 @@
 import Supports from './support/Supports'
 import Category from './category/Category'
-import Products from './Products'
+import Products from './products/Products'
 function Body() {
     return (
         <>

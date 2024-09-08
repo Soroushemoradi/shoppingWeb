@@ -12,7 +12,7 @@ function Head() {
                     Nullam ac aliquet velit.
                     Aliquam vulputate velit imperdiet dolor tempor tristique.
                 </p>
-                <div className='btn mt-5'>shop now <FontAwesomeIcon className='ms-3' icon={faArrowRight} /> </div>
+                <button className='btn mt-5 btn-header'><span className='me-1'>shop now div</span><FontAwesomeIcon className='btn-icon' icon={faArrowRight} /> </button>
             </div>
             <div className='col-6'>
                 <img src="header.png" alt="pic" className='w-100 rounded' height={500} />
