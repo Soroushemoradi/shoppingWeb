@@ -1,9 +1,7 @@
 .p-header{
     text-justify: auto;
 }
-.item-body{
-    background-color: rgb(204, 204, 204);
-}
+
 .image{
     object-fit: cover;
 }
@@ -16,12 +14,6 @@ li.bread :hover {
 }
 .crumbDiv{
     height: 30px;
-}
-.stools-image{
-    object-fit: cover;
-}
-.btn-prud{
-    background-color: #ebebeb;
 }
 button.btn:hover {
     background-color: #b9b9b9;

@@ -4,12 +4,10 @@ import Body from './Body';
 
 function Home() {
     return (
-        <>
             <Container>
                 <Head />
                 <Body />
             </Container>
-        </>
     )
 }
 

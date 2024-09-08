@@ -4,7 +4,7 @@ import Navigation from './components/layers/header/Nav'
 import Home from './components/layers/main/Home'
 function App() {
   const pages = [{
-    path: '/home',
+    path: '/',
     element: <Home />
   },
   {

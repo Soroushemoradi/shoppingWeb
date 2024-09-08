@@ -8,32 +8,16 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import navs from './navData';
 function Navigation() {
   const [search, setSearch] = useState(false)
-  const navs = [
-    {
-      href: "/home",
-      text: "Home"
-    },
-    {
-      href: "/Gallery",
-      text: "Gallery"
-    },
-    {
-      href: "/faq",
-      text: "F&Q's"
-    },
-    {
-      href: "/contact_Us",
-      text: "contact Us"
-    },
-  ]
+
   return (
     <>
       <Navbar className='mt-3 '>
         <Container className='grid3 border rounded-4 p-3 container'>
           <div>
-            <Navbar.Brand className='me-5' href="/home">Navbar</Navbar.Brand>
+            <Navbar.Brand className='me-5' href="/">Navbar</Navbar.Brand>
           </div>
           <div>
             <Nav className="flex-center gap-4">
@@ -44,20 +28,14 @@ function Navigation() {
           </div>
           <div>
             <Form inline className='d-flex'>
-
-              <div className='w-25 btn' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></div>
-              {search === true &&
+              <button type='button' className='w-25 btn' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+              {search &&
                 <Form.Control
                   type="text"
                   placeholder="Search"
                   className=" mr-sm-2"
                 />
               }
-
-
-
-
-
             </Form>
           </div>
         </Container>

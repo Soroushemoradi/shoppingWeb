@@ -1,40 +1,14 @@
 import { Link } from "react-router-dom"
-import RatingStar from "./RatingStar"
-import './home.css'
-import Crumb from "./Breadcrumb"
-function Products() {
-    const pruds = [
-        {
-            image: "prud1.jpg",
-            discriotion: "Eco plastic chair with armrests",
-            price: "$19.00"
-        },
-        {
-            image: "prud2.jpg",
-            discriotion: "Eco plastic chair with armrests",
-            price: "$20.00"
-        },
-        {
-            image: "prud3.jpg",
-            discriotion: "Eco plastic chair with armrests",
-            price: "$19.00"
-        },
-        {
-            image: "prud4.jpg",
-            discriotion: "Eco plastic chair with armrests",
-            price: "$33.00"
-        },
-        {
-            image: "prud5.jpg",
-            discriotion: "Eco plastic chair with armrests",
-            price: "$19.00"
-        }, {
-            image: "prud6.jpg",
-            discriotion: "Eco plastic chair with armrests",
-            price: "$23.00"
-        }
+import RatingStar from "../RatingStar"
+import './product.css'
+import Crumb from "../breadcrumb/Breadcrumb"
+import pruds from "./productData"
 
-    ]
+
+
+
+function Products() {
+  
     return (
         <>
             <h3 className="mt-5  mb-3  text-center">shop by categories</h3>
