@@ -4,7 +4,7 @@ import FooterData from "./FooterData"
 function FooterLastNews() {
   return (
           <div>
-          <h4 className=" mt-5 mb-5 ms-4">Last News</h4>
+          <h4 className=" mt-3 mb-5 ms-4">Last News</h4>
               {FooterData.map(({ src, title, date }) => <React.Fragment key={title}>
                   <div className="d-flex mb-2 ms-4">
                       <div className="w-25 mt-2">
