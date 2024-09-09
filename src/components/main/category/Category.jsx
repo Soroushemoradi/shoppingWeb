@@ -18,7 +18,7 @@ function Category() {
                                     <button className='btn btn-category flex-center'><span className='me-1'>view collection</span><FontAwesomeIcon className=' btn-icon' icon={faArrowRight} /></button>
                                 </div>
                                 <div>
-                                    <img src={image} alt="pic" className='h-100 w-100' />
+                                    <img src={image} alt="pic" className='h-100 w-100 img-head' />
                                 </div>
                             </div>
                         </>
