@@ -1,0 +1,17 @@
+.grid3 {
+    display: grid !important;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+}
+
+button:active{
+    outline: 0;
+    border: none;
+}
+.inp-search{
+    height: 32px;
+}
+button.btn-header:hover .btn-icon {
+    transform: translateX(10px);
+    transition: 300ms;
+}

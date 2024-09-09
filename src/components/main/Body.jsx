@@ -4,9 +4,9 @@ import Products from './products/Products'
 function Body() {
     return (
         <>
-            <Category/>
-            <Supports/>
-            <Products/>
+            <Category />
+            <Supports />
+            <Products />
         </>
     )
 }

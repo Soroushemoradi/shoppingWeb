@@ -5,9 +5,7 @@
 .image{
     object-fit: cover;
 }
-.link1{
-    text-decoration: none;
-}
+
 li.bread :hover {
     font-size: 18pt;
     transition: 500ms;

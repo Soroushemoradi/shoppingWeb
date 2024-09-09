@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Navigation from './components/layers/header/Nav'
-import Home from './components/layers/main/Home'
+import Navigation from './components/header/Nav'
+import Home from './components/main/Home'
 function App() {
   const pages = [{
     path: '/',

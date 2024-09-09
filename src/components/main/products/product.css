@@ -7,3 +7,6 @@ button.btn-prud:hover {
 .image {
     object-fit: cover;
 }
+.link1 {
+    text-decoration: none;
+}
