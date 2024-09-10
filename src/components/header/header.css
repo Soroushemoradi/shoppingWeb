@@ -15,3 +15,11 @@ button.btn-header:hover .btn-icon {
     transform: translateX(10px);
     transition: 300ms;
 }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+.carusell-img{
+    object-fit: cover;
+}

@@ -3,8 +3,11 @@ import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
+import SwiperCar from './Swiper';
+
 function Head() {
     return (
+        <>
         <div className='col-12 d-flex mt-3 mb-5'>
             <div className='col-6'>
                 <h1 className='w-50 mt-5 pt-5 mb-5'>flexible chair</h1>
@@ -18,6 +21,9 @@ function Head() {
                 <img src="header.png" alt="pic" className='w-100 rounded' height={500} />
             </div>
         </div>
+        <div className=''><SwiperCar/></div>
+        
+        </>
     )
 }
 
