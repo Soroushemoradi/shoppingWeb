@@ -23,3 +23,6 @@ button.btn-header:hover .btn-icon {
 .carusell-img{
     object-fit: cover;
 }
+.mySwiper{
+    height: 450px;
+}
