@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import RatingStar from "../RatingStar"
+import RatingStar from "../home/RatingStar"
 import './product.css'
 import Crumb from "../breadcrumb/Breadcrumb"
 import pruds from "./productData"

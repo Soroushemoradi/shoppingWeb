@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navigation from './components/header/Nav'
-import Home from './components/main/Home'
+import Home from './components/home/Home'
 function App() {
   const pages = [{
     path: '/',
@@ -17,7 +17,8 @@ function App() {
   }, {
     path: '/contact_Us',
     element: <p>mio4</p>
-  }]
+  }
+]
   return (
     <>
       <BrowserRouter>
