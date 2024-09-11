@@ -2,14 +2,15 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navigation from './components/header/Nav'
 import Home from './components/home/Home'
+import Gallery from './components/gallery/Gallery'
 function App() {
   const pages = [{
     path: '/',
-    element: <Home />
+    element:<Home/>
   },
   {
     path: '/Gallery',
-    element: <p>mio2</p>
+    element:<Gallery/>
   },
   {
     path: '/faq',

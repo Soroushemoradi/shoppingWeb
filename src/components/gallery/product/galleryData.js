@@ -1,0 +1,123 @@
+const GalleryData = [
+  {
+    image: "product1 (1).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "2.5",
+  },
+  {
+    image: "product1 (2).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "3.5",
+  },
+  {
+    image: "product1 (3).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "5",
+  },
+  {
+    image: "product1 (4).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "4.5",
+  },
+  {
+    image: "product1 (5).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "2.5",
+  },
+  {
+    image: "product1 (6).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "3.5",
+  },
+  {
+    image: "product1 (7).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "0.5",
+  },
+  {
+    image: "prud3.jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "1",
+  },
+  {
+    image: "product1 (9).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "2.5",
+  },
+  {
+    image: "product1 (10).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "2",
+  },
+  {
+    image: "product1 (11).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "1",
+  },
+  {
+    image: "product1 (12).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "4.5",
+  },
+  {
+    image: "product1 (13).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "5",
+  },
+  {
+    image: "product1 (14).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "2.5",
+  },
+  {
+    image: "product1 (15).jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "4.5",
+  },
+  {
+    image: "prud1.jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "4",
+  },
+  {
+    image: "prud2.jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "2.5",
+  },
+  {
+    image: "prud4.jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "3.5",
+  },
+  {
+    image: "prud5.jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "0.5",
+  },
+  {
+    image: "prud6.jpg",
+    discriotion: "Eco plastic chair with armrests",
+    price: "$19.00",
+    defaultValue: "1.5",
+  },
+];
+export default GalleryData

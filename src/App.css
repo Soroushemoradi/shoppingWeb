@@ -4,6 +4,56 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
+.grid-2 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 .container{
     font-size: 15pt;
+}
+.btn-nav {
+    display: none !important;
+}
+.nav-mobile {
+    display: none;
+    transition: all 0.3s;
+    transform: translateY(-150%) scale(0);
+}
+@media (max-width:1024px) {
+    .grid-3 {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+}
+@media (max-width:450px) {
+    .grid-3 {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    .grid3 {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    .grid-2 {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    .nav-xs{
+            display: none !important;
+        }
+    .btn-nav {
+            display: block !important;
+        }
+    .nav-mobile {
+            display: block;
+    }
+    .nav-mobile__open {
+            transform: translateY(0) scale(1);
+    }
+
 }
