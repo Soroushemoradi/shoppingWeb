@@ -8,7 +8,7 @@ function FooterLastNews() {
               {FooterData.map(({ src, title, date }) => <React.Fragment key={title}>
                   <div className="d-flex mb-2 ms-4">
                       <div className="w-25 mt-2">
-                          <img src={src} alt={title} className="w-100  rounded" />
+                          <img src={'/'+src} alt={title} className="w-100  rounded" />
                       </div>
                       <div className="ms-3">
                           <p className="d-block mb-1">{title}</p>

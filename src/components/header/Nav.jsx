@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 import navs from './navData';
 function Navigation() {
   const [search, setSearch] = useState(false)
-  const [showNav, setShowNav] = useState(false)
+  const [showNav, setShowNav] = useState(true)
 
   return (
     <>

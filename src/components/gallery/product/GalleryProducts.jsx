@@ -4,10 +4,11 @@ import GalleryData from "./galleryData"
 import { Link } from "react-router-dom"
 
 function GalleryProducts() {
+
     return (
         <>
             <div className="grid-3 mt-5">
-                {GalleryData.map(({ image, discriotion, price, defaultValue }) => <React.Fragment key={image}><div className="mb-5"><Link className="link1" to={"/gallery"}>
+                {GalleryData.map(({ image, discriotion, price, defaultValue, id }) => <React.Fragment key={image}><div className="mb-5"><Link className="link1" to={`/Gallery/${id}`} id={id}>
                     <img src={image} alt="pic" className="w-100 rounded-4 mb-4 image" height={400} />
                 </Link>
                     <div>

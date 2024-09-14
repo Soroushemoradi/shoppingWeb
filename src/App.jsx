@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navigation from './components/header/Nav'
 import Home from './components/home/Home'
 import Gallery from './components/gallery/Gallery'
+import ProudPage from './components/gallery/product/ProudPage'
 function App() {
   const pages = [{
     path: '/',
@@ -18,7 +19,12 @@ function App() {
   }, {
     path: '/contact_Us',
     element: <p>mio4</p>
-  }
+  },
+    {
+      path: `Gallery/:id`,
+      element:<ProudPage/>
+    }
+
 ]
   return (
     <>
