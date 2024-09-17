@@ -6,7 +6,7 @@ import FooterSubscribe from './FooterSubscribe'
 function Footer() {
     return (
         <>
-            <div className='grid-3 footer'>
+            <div className='grid-3 footer mb-3 rounded-4'>
                 <FooterLastNews/>
                 <FooterContactUs />
                 <FooterSubscribe/>
