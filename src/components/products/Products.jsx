@@ -31,7 +31,7 @@ function Products() {
 
             </div>
             <div className="text-center mb-5">
-                <button className="btn rounded-4 border border-dark btn-prud">view all products</button>
+                <Link to={'/Gallery'} className="link1"><button className="btn rounded-4 border border-dark btn-prud">view all products</button></Link>
             </div>
         </>
     )

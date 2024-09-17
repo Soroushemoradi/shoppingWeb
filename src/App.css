@@ -53,7 +53,14 @@
             display: block;
     }
     .nav-mobile__open {
+            display: block;
             transform: translateY(0) scale(1);
     }
+    .nav-mobile__hidden {
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+                transform: translateY(-150%) scale(0);
+        }
 
 }

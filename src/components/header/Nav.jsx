@@ -4,14 +4,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCross, faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
 import './header.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import navs from './navData';
 function Navigation() {
   const [search, setSearch] = useState(false)
-  const [showNav, setShowNav] = useState(true)
+  const [showNav, setShowNav] = useState(false)
 
   return (
     <>
@@ -42,7 +42,7 @@ function Navigation() {
         </Container>
       </Navbar>
       <button className='btn btn-nav mt-3 ms-2' onClick={() => setShowNav(!showNav)}><FontAwesomeIcon icon={!showNav ? faBars : faTimes} /></button>
-      <nav className={`mt-3 nav-mobile bg-light w-75 mx-auto rounded-4 ${showNav && "nav-mobile__open"}`}>
+      <nav className={`mt-3 nav-mobile bg-light w-75 mx-auto rounded-4 ${showNav ? "nav-mobile__open" : "nav-mobile__hidden"}`}>
 
         <div className='nav-mobile-item pb-3 pt-2'>
           <div>

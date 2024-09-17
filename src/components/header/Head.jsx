@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
 import SwiperCar from './Swiper';
 
 function Head() {
@@ -17,7 +16,7 @@ function Head() {
                     </p>
                     <button className='btn mt-5 btn-header'><span className='me-1'>shop now</span><FontAwesomeIcon className='btn-icon' icon={faArrowRight} /> </button>
                 </div>
-                <div className=''>
+                <div>
                     <img src="header.png" alt="pic" className='w-100 rounded' height={500} />
                 </div>
             </div>
