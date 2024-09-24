@@ -18,7 +18,7 @@ function Navigation() {
       <Navbar className='mt-3 nav-xs'>
         <Container className='grid3 border rounded-4 p-3 container'>
           <div>
-            <Navbar.Brand className='me-5' href="/">Navbar</Navbar.Brand>
+            <Navbar.Brand className='me-5'><Link className='text-decoration-none text-secondary' to={"/"}>logo</Link></Navbar.Brand>
           </div>
           <div>
             <Nav className="flex-center gap-4">

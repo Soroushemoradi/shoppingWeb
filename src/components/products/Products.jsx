@@ -15,7 +15,7 @@ function Products() {
             <h3 className="mt-5  mb-3  text-center">shop by categories</h3>
             <Crumb />
             <div className="grid-3 mt-5">
-                {pruds.map(({ image, discriotion, price, defaultValue }) => <React.Fragment key={image}><div className="mb-5"><Link className="link1" to={"/gallery"}>
+                {pruds.map(({ image, discriotion, price, defaultValue,id }) => <React.Fragment key={image}><div className="mb-5"><Link className="link1" to={`/gallery/${id}`} id={id}>
                     <img src={image} alt="pic" className="w-100 rounded-4 mb-4 image" height={400} />
                 </Link>
                     <div>

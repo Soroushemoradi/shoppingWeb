@@ -15,10 +15,10 @@ function App() {
   },
   {
     path: '/faq',
-    element: <p>mio3</p>
+    element: <p>f&Q</p>
   }, {
     path: '/contact_Us',
-    element: <p>mio4</p>
+    element: <p>contact_Us</p>
   },
     {
       path: `Gallery/:id`,
