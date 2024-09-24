@@ -2,15 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
+import '../header.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import navs from './navData';
-import SearchBar from './SearchBar';
-import '../header.css'
 function Navigation() {
-
+  const [search, setSearch] = useState(false)
   const [showNav, setShowNav] = useState(false)
 
   return (
@@ -18,7 +18,7 @@ function Navigation() {
       <Navbar className='mt-3 nav-xs'>
         <Container className='grid3 border rounded-4 p-3 container'>
           <div>
-            <Navbar.Brand className='me-5'><Link className='text-decoration-none text-secondary' to={"/"}>logo</Link></Navbar.Brand>
+            <Navbar.Brand className='me-5' href="/">Navbar</Navbar.Brand>
           </div>
           <div>
             <Nav className="flex-center gap-4">
@@ -28,7 +28,16 @@ function Navigation() {
             </Nav>
           </div>
           <div>
-            <SearchBar/>
+            <Form inline className='d-flex'>
+              <button type='button' className=' border border-0 btn-search rounded-5' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+              {search &&
+                <Form.Control
+                  type="text"
+                  placeholder="Search"
+                  className="inp-search"
+                />
+              }
+            </Form>
           </div>
         </Container>
       </Navbar>
@@ -43,9 +52,13 @@ function Navigation() {
               }
             </div>
           </div>
-          <div className='ms-5 mt-2'>
-          <SearchBar/>
-          </div>
+          <Form inline>
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              className="inp-search w-50 ms-5 mt-3 "
+            />
+          </Form>
         </div>
 
 
