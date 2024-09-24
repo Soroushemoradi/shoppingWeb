@@ -5,10 +5,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars,faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
-import './header.css'
+import '../header.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import navs from './navData';
+import SearchBar from './SearchBar';
 function Navigation() {
   const [search, setSearch] = useState(false)
   const [showNav, setShowNav] = useState(false)
@@ -28,7 +29,7 @@ function Navigation() {
             </Nav>
           </div>
           <div>
-            <Form inline className='d-flex'>
+            {/* <Form inline className='d-flex'>
               <button type='button' className=' border border-0 btn-search rounded-5' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
               {search &&
                 <Form.Control
@@ -37,7 +38,8 @@ function Navigation() {
                   className="inp-search"
                 />
               }
-            </Form>
+            </Form> */}
+            <SearchBar/>
           </div>
         </Container>
       </Navbar>

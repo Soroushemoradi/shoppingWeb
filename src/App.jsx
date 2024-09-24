@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Navigation from './components/header/Nav'
+import Navigation from './components/header/nav/Nav'
 import Home from './components/home/Home'
 import Gallery from './components/gallery/Gallery'
 import ProudPage from './components/gallery/product/ProudPage'
