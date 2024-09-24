@@ -2,16 +2,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars,faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
-import '../header.css'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import navs from './navData';
 import SearchBar from './SearchBar';
+import '../header.css'
 function Navigation() {
-  const [search, setSearch] = useState(false)
+
   const [showNav, setShowNav] = useState(false)
 
   return (
@@ -29,16 +28,6 @@ function Navigation() {
             </Nav>
           </div>
           <div>
-            {/* <Form inline className='d-flex'>
-              <button type='button' className=' border border-0 btn-search rounded-5' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-              {search &&
-                <Form.Control
-                  type="text"
-                  placeholder="Search"
-                  className="inp-search"
-                />
-              }
-            </Form> */}
             <SearchBar/>
           </div>
         </Container>
@@ -54,13 +43,9 @@ function Navigation() {
               }
             </div>
           </div>
-          <Form inline>
-            <Form.Control
-              type="text"
-              placeholder="Search"
-              className="inp-search w-50 ms-5 mt-3 "
-            />
-          </Form>
+          <div className='ms-5 mt-2'>
+          <SearchBar/>
+          </div>
         </div>
 
 
