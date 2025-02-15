@@ -20,6 +20,9 @@
     transition: all 0.3s;
     transform: translateY(-150%) scale(0);
 }
+.resize{
+    resize: none;
+}
 @media (max-width:1024px) {
     .grid-3 {
             display: grid !important;

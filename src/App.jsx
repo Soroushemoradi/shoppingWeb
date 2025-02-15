@@ -4,6 +4,8 @@ import Navigation from './components/header/nav/Nav'
 import Home from './components/home/Home'
 import Gallery from './components/gallery/Gallery'
 import ProudPage from './components/gallery/product/ProudPage'
+import Error from './components/404Eror/Error'
+import ContactUs from './components/ContactUs/ContactUs'
 function App() {
   const pages = [{
     path: '/',
@@ -18,7 +20,7 @@ function App() {
     element: <p>f&Q</p>
   }, {
     path: '/contact_Us',
-    element: <p>contact_Us</p>
+    element: <ContactUs/>
   },
     {
       path: `Gallery/:id`,
@@ -36,7 +38,7 @@ function App() {
             pages.map(({ path, element }) => <Route key={path} path={path} element={element} />)
           }
 
-          <Route path="*" element={<p>404</p>} />
+          <Route path="*" element={<Error/>} />
         </Routes>
       </BrowserRouter>
 
