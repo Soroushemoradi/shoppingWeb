@@ -6,6 +6,8 @@ import Gallery from './components/gallery/Gallery'
 import ProudPage from './components/gallery/product/ProudPage'
 import Error from './components/404Eror/Error'
 import ContactUs from './components/ContactUs/ContactUs'
+import ShoppingCard from './components/ShoppingCard/ShoppingCard'
+import { CartProvider } from './components/CardContext/cardContext'
 function App() {
   const pages = [{
     path: '/',
@@ -30,6 +32,7 @@ function App() {
 ]
   return (
     <>
+    <CartProvider>
       <BrowserRouter>
         <Navigation />
         <Routes>
@@ -37,11 +40,11 @@ function App() {
           {
             pages.map(({ path, element }) => <Route key={path} path={path} element={element} />)
           }
-
+          <Route path='Card' element={<ShoppingCard/>}/>
           <Route path="*" element={<Error/>} />
         </Routes>
       </BrowserRouter>
-
+      </CartProvider>
     </>
   )
 }

@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faCartShopping, faMagnifyingGlass, faTimes } from '@fortawesome/free-solid-svg-icons'
 import '../header.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
@@ -29,6 +29,7 @@ function Navigation() {
           </div>
           <div>
             <Form inline className='d-flex'>
+              <Link className='btn border border-0 rounded-5 ' to={"Card"}><FontAwesomeIcon icon={faCartShopping} /></Link>
               <button type='button' className=' border border-0 btn-search rounded-5' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
               {search &&
                 <Form.Control
@@ -48,9 +49,20 @@ function Navigation() {
           <div>
             <div className=" gap-4 ms-5">
               {
-                navs.map(({ href, text }) => <React.Fragment key={text}><div className='mb-2'> <Link key={href} to={href} className='text-decoration-none text-secondary ms-2 font-weight-bold '>{text}</Link> <div className='border w-75'></div></div></React.Fragment>)
+                navs.map(({ href, text }) =>
+                  <React.Fragment key={text}>
+                    <div className='mb-2'>
+                      <Link key={href} to={href} className='text-decoration-none text-secondary ms-2 font-weight-bold '>{text}
+                      </Link>
+                      <div className='border w-75'></div>
+                    </div>
+                  </React.Fragment>)
               }
             </div>
+          </div>
+          <div className='gap-4 ms-5'>
+            <Link className='text-decoration-none text-secondary ms-2 font-weight-bold ' to={"Card"}>card</Link>
+            <div className='border w-75'></div>
           </div>
           <Form inline>
             <Form.Control
