@@ -20,6 +20,6 @@ export const contactUs = [
   },
   {
     icon: faEnvelope,
-    text: "demo@example.com",
+    text: "soroush.moradi.1385@gmail.com",
   },
 ];
