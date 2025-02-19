@@ -23,6 +23,9 @@
 .resize{
     resize: none;
 }
+.card-item{
+    background-color: lightgray;
+}
 @media (max-width:1024px) {
     .grid-3 {
             display: grid !important;

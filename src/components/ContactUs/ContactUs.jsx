@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../footer/Footer'
 
 function ContactUs() {
     return (
@@ -6,7 +7,7 @@ function ContactUs() {
             <div className="col-lg-5 text-center w-100 ">
                 <h1 className="mb-4">Contact Us</h1>
             </div>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center mb-5">
                 <div className="col-12 col-md-8 col-lg-6">
                     <form>
                         <div className="row">
@@ -37,6 +38,7 @@ function ContactUs() {
                     </form>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

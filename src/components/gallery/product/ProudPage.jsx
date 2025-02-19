@@ -5,6 +5,8 @@ import Footer from '../../footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from '../../CardContext/cardContext';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ProudPage() {
   const { id } = useParams();
@@ -16,8 +18,35 @@ function ProudPage() {
     setProduct(foundProduct);
   }, [id]);
 
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+      toast.success('Added to cart!', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+    else{
+      toast.error("faild to add in card!",{
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+  };
+
   return (
     <>
+      <ToastContainer />
       <div className='grid-2 mt-5 ms-5 mb-5'>
         <div>
           <img src={'/' + product?.image} alt={product?.id} className='w-75 ms-5 h-75' />
@@ -30,9 +59,9 @@ function ProudPage() {
           </div>
           <button
             className='btn border rounded-5'
-            onClick={() => addToCart(product)}
+            onClick={handleAddToCart}
           >
-            add to card<FontAwesomeIcon icon={faCartShopping} className='ms-3' />
+            add to card <FontAwesomeIcon icon={faCartShopping} className='ms-3' />
           </button>
         </div>
       </div>
