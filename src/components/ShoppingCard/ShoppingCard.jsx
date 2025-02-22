@@ -35,15 +35,15 @@ function CartPage() {
     const uniqueCartItems = Object.values(itemCounts);
 
     return (
-        <div className="container mt-5">
+        <div className="container  mt-5">
             <ToastContainer />
             <h2>Shopping Cart</h2>
             {uniqueCartItems.length === 0 ? (
                 <p>Your Shopping Cart is empty</p>
             ) : (
-                <div className="d-flex flex-wrap text-center">
+                    <div className="grid-3 text-center items-center">
                     {uniqueCartItems.map((item) => (
-                        <div key={item.id} className="mt-5 ms-5 mb-5 w-25 border rounded-3 pt-2 pb-2 card-item">
+                        <div key={item.id} className="mx-auto mt-3 mb-3 w-75 border rounded-3 pt-2 pb-2 card-item text-center">
                             <Link className="link1 text-dark" to={`/Gallery/${item.id}`}>
                                 <div>
                                     <img src={"/" + item.image} alt={item.id} className="w-75 rounded" />
@@ -52,7 +52,7 @@ function CartPage() {
                             <div className="text-center">
                                 <h4>{item.discriotion}</h4>
                                 <h5 className="mt-3 mb-3"><i>{item.price}</i></h5>
-                                <p>Number: {item.count}</p>
+                                <p><i>Number: {item.count}</i></p>
                                 <button className="btn border rounded-5" onClick={()=>handleDeleteItem(item.id)}>
                                     Remove from cart <FontAwesomeIcon icon={faTrash} className="ms-3" />
                                 </button>
