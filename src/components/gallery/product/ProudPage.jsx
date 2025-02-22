@@ -22,7 +22,7 @@ function ProudPage() {
     if (product) {
       addToCart(product);
       toast.success('Added to cart!', {
-        position: 'top-right',
+        position: 'top-left',
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -33,7 +33,7 @@ function ProudPage() {
     }
     else{
       toast.error("faild to add in card!",{
-        position: 'top-right',
+        position: 'top-left',
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,

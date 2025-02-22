@@ -4,43 +4,62 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../footer/Footer";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer,} from 'react-toastify';
 
 
 function CartPage() {
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, removeFromCard } = useContext(CartContext);
 
-    console.log(cartItems)
+    const itemCounts = cartItems.reduce((number, item) => {
+        if (number[item.id]) {
+            number[item.id].count += 1;
+        } else {
+            number[item.id] = { ...item, count: 1 };
+        }
+        return number;
+    }, {});
+
+    const handleDeleteItem=(id)=>{
+        removeFromCard(id)
+        toast.error("removed from the card", {
+            position: 'top-left',
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        })
+    }
+
+    const uniqueCartItems = Object.values(itemCounts);
 
     return (
         <div className="container mt-5">
-            <h2>Shopping Card</h2>
-            {cartItems.length === 0 ? (
-                <p>your Shopping Card is empty</p>
+            <ToastContainer />
+            <h2>Shopping Cart</h2>
+            {uniqueCartItems.length === 0 ? (
+                <p>Your Shopping Cart is empty</p>
             ) : (
-                <div className="d-flex text-center">
-                    {cartItems.map((item, index) => (
-                        <>
-                            <div className=' mt-5 ms-5 mb-5 w-25 border rounded-3 pt-2 pb-2 card-item '>
-                                <Link className="link1 text-dark" to={`/Gallery/${item?.id}`}>
-                                    <div className="">
-                                        <img src={'/' + item?.image} alt={item?.id} className='w-75 rounded' />
-                                    </div>
-                                </Link >
-                                <div className='text-center'>
-                                    <h4>{item?.discriotion}</h4>
-                                    <h5 className='mt-3 mb-3'><i>{item?.price}</i></h5>
-                                    <p>Number:</p>
-                                    <button
-                                        className='btn border rounded-5'
-                                    >
-                                        remove from card<FontAwesomeIcon icon={faTrash} className='ms-3' />
-                                    </button>
+                <div className="d-flex flex-wrap text-center">
+                    {uniqueCartItems.map((item) => (
+                        <div key={item.id} className="mt-5 ms-5 mb-5 w-25 border rounded-3 pt-2 pb-2 card-item">
+                            <Link className="link1 text-dark" to={`/Gallery/${item.id}`}>
+                                <div>
+                                    <img src={"/" + item.image} alt={item.id} className="w-75 rounded" />
                                 </div>
+                            </Link>
+                            <div className="text-center">
+                                <h4>{item.discriotion}</h4>
+                                <h5 className="mt-3 mb-3"><i>{item.price}</i></h5>
+                                <p>Number: {item.count}</p>
+                                <button className="btn border rounded-5" onClick={()=>handleDeleteItem(item.id)}>
+                                    Remove from cart <FontAwesomeIcon icon={faTrash} className="ms-3" />
+                                </button>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </div>
-
             )}
             <Footer />
         </div>
@@ -48,4 +67,3 @@ function CartPage() {
 }
 
 export default CartPage;
-

@@ -9,8 +9,20 @@ export const CartProvider = ({ children }) => {
         setCartItems((prevItems) => [...prevItems, product]);
     };
 
+    const removeFromCard=(id)=>{
+        setCartItems((prevItems)=>{
+            const index=prevItems.findIndex(item=>item.id===id)
+            if(index >= 0){
+                const updateItems=[...prevItems]
+                updateItems.splice(index,1)
+                return updateItems
+            }
+            return prevItems
+        })
+    }
+
     return (
-        <CartContext.Provider value={{ cartItems, addToCart }}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeFromCard }}>
             {children}
         </CartContext.Provider>
     );
