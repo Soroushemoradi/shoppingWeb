@@ -19,7 +19,7 @@ function App() {
   },
   {
     path: '/faq',
-    element: <p>f&Q</p>
+    element: <Error/>
   }, {
     path: '/contact_Us',
     element: <ContactUs/>

@@ -13,7 +13,7 @@ function CartPage() {
         updateCartItem(id, currentCount + 1);
     };
 
-    const handleSubtractItem = (id, currentCount) => {
+    const handleDecreaseItem = (id, currentCount) => {
         if (currentCount > 1) {
             updateCartItem(id, currentCount - 1);
         }
@@ -54,7 +54,7 @@ function CartPage() {
                                 <h4>{item.discriotion}</h4>
                                 <h5 className="mt-3 mb-3"><i>${item.price}</i></h5>
                                 <div className="d-flex ms-5">
-                                    <button className="ms-2 btn" onClick={() => handleSubtractItem(item.id, item.count)}>
+                                    <button className="ms-2 btn" onClick={() => handleDecreaseItem(item.id, item.count)}>
                                         <h5>-</h5>
                                     </button>
                                     <p><i>Number: {item.count}</i></p>
