@@ -22,7 +22,7 @@ function CartPage() {
     const handleDeleteItem = (id) => {
         removeFromCart(id);
         toast.error("Removed from the cart", {
-            position: 'top-left',
+            position: 'bottom-left',
             autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
