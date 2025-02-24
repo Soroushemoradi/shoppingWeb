@@ -29,10 +29,16 @@ function CartPage() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            
         })
+        console.log(cartItems)
     }
 
     const uniqueCartItems = Object.values(itemCounts);
+    
+    
+
+    const totalPrice = cartItems.reduce((acc, item) => acc + Number(item.price), 0);
 
     return (
         <div className="container  mt-5">
@@ -51,7 +57,7 @@ function CartPage() {
                             </Link>
                             <div className="text-center">
                                 <h4>{item.discriotion}</h4>
-                                <h5 className="mt-3 mb-3"><i>{item.price}</i></h5>
+                                <h5 className="mt-3 mb-3"><i>${item.price}</i></h5>
                                 <p><i>Number: {item.count}</i></p>
                                 <button className="btn border rounded-5" onClick={()=>handleDeleteItem(item.id)}>
                                     Remove from cart <FontAwesomeIcon icon={faTrash} className="ms-3" />
@@ -61,6 +67,7 @@ function CartPage() {
                     ))}
                 </div>
             )}
+            {cartItems.length != 0 && <div className="w-25 border rounded-4 text-center mt-4 mb-4 p-1 text-bg-secondary ">total price= ${totalPrice}</div>}
             <Footer />
         </div>
     );

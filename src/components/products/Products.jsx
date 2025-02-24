@@ -21,7 +21,7 @@ function Products() {
                     <div>
                         <RatingStar defaultValue={defaultValue} />
                         <h6 className="mb-4 text-body">{discriotion}</h6>
-                        <p className="mb-4 text-body">{price}</p>
+                        <p className="mb-4 text-body">${price}</p>
                     </div>
 
                 </div>

@@ -53,7 +53,7 @@ function ProudPage() {
         </div>
         <div className='text-center'>
           <h3>{product?.discriotion}</h3>
-          <h5 className='mt-5 mb-5'><i>{product?.price}</i></h5>
+          <h5 className='mt-5 mb-5'><i>${product?.price}</i></h5>
           <div className='w-75 mx-auto mb-5'>
             <p>{product?.about}</p>
           </div>
