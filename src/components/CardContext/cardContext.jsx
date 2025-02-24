@@ -6,23 +6,32 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (product) => {
-        setCartItems((prevItems) => [...prevItems, product]);
+        setCartItems((prevItems) => {
+            const exist = prevItems.find(item => item.id === product.id);
+            if (exist) {
+                return prevItems.map(item =>
+                    item.id === product.id ? { ...item, count: item.count + 1 } : item
+                );
+            } else {
+                return [...prevItems, { ...product, count: 1 }];
+            }
+        });
     };
 
-    const removeFromCard=(id)=>{
-        setCartItems((prevItems)=>{
-            const index=prevItems.findIndex(item=>item.id===id)
-            if(index >= 0){
-                const updateItems=[...prevItems]
-                updateItems.splice(index,1)
-                return updateItems
-            }
-            return prevItems
-        })
-    }
+    const removeFromCart = (id) => {
+        setCartItems((prevItems) => prevItems.filter(item => item.id !== id));
+    };
+
+    const updateCartItem = (id, newCount) => {
+        setCartItems((prevItems) =>
+            prevItems.map(item =>
+                item.id === id ? { ...item, count: newCount } : item
+            )
+        );
+    };
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeFromCard }}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateCartItem }}>
             {children}
         </CartContext.Provider>
     );
