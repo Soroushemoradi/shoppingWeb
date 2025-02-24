@@ -12,6 +12,7 @@ function FooterContactUs() {
                   <p className="ms-2">{text}</p>
               </div>
           </React.Fragment>)}
+          <p className='text-secondary'>this template made by soroush</p>
       </div>
   )
 }

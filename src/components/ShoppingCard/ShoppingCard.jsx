@@ -35,46 +35,53 @@ function CartPage() {
     const totalPrice = cartItems.reduce((acc, item) => acc + Number(item.price) * item.count, 0);
 
     return (
-        <div className="container mt-5">
-            <ToastContainer />
-            <h2>Shopping Cart</h2>
-            {cartItems.length === 0 ? (
-                <p>Your Shopping Cart is empty</p>
-            ) : (
-                <div className="grid-3 items-center">
-                    {cartItems.map((item) => (
-                        <div key={item.id} className="mx-auto mt-3 mb-3 w-75 border rounded-3 pt-2 pb-2 card-item">
-                            <button className="btn border rounded-5" onClick={() => handleDeleteItem(item.id)}><FontAwesomeIcon icon={faTrash} className="text-danger"/></button>
-                            <Link className="link1 text-dark text-center" to={`/Gallery/${item.id}`}>
-                                <div>
-                                    <img src={"/" + item.image} alt={item.id} className="w-75 rounded" />
-                                </div>
-                            </Link>
-                            <div className="text-center">
-                                <h4>{item.discriotion}</h4>
-                                <h5 className="mt-3 mb-3"><i>${item.price}</i></h5>
-                                <div className="d-flex ms-5">
-                                    <button className="ms-2 btn" onClick={() => handleDecreaseItem(item.id, item.count)}>
-                                        <h5>-</h5>
-                                    </button>
-                                    <p><i>Number: {item.count}</i></p>
-                                    <button className="btn" onClick={() => handleIncreaseItem(item.id, item.count)}>
-                                        <h5>+</h5>
-                                    </button>
-                                </div>
+        <>
+            <div className="container">
+                <h2>Shopping Cart</h2>
+            </div>
+            <div className="container mt-5">
+                <ToastContainer />
+                {cartItems.length === 0 ? (<>
+                    <p className="fs-4">Your Shopping Cart is empty!</p><button className="btn border btn-secondary rounded-5">
+                        <Link to={"/Gallery"} className="link1 text-white fs-6">Go to Gallery</Link>
+                    </button>
+                </>
+                ) : (
+                    <div className="grid-3 items-center">
+                        {cartItems.map((item) => (
+                            <div key={item.id} className="mx-auto mt-3 mb-3 w-75 border rounded-3 pt-2 pb-2 card-item">
+                                <button className="btn border rounded-5" onClick={() => handleDeleteItem(item.id)}><FontAwesomeIcon icon={faTrash} className="text-danger" /></button>
+                                <Link className="link1 text-dark text-center" to={`/Gallery/${item.id}`}>
+                                    <div>
+                                        <img src={"/" + item.image} alt={item.id} className="w-75 rounded" />
+                                    </div>
+                                </Link>
+                                <div className="text-center">
+                                    <h4>{item.discriotion}</h4>
+                                    <h5 className="mt-3 mb-3"><i>${item.price}</i></h5>
+                                    <div className="d-flex ms-5">
+                                        <button className="ms-2 btn" onClick={() => handleDecreaseItem(item.id, item.count)}>
+                                            <h5>-</h5>
+                                        </button>
+                                        <p><i>Number: {item.count}</i></p>
+                                        <button className="btn" onClick={() => handleIncreaseItem(item.id, item.count)}>
+                                            <h5>+</h5>
+                                        </button>
+                                    </div>
 
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            )}
-            {cartItems.length !== 0 && (
-                <div className=" border rounded-4 text-center mt-4 mb-4 p-1 text-bg-secondary">
-                    Total Price = ${totalPrice}
-                </div>
-            )}
-            <Footer />
-        </div>
+                        ))}
+                    </div>
+                )}
+                {cartItems.length !== 0 && (
+                    <div className=" border rounded-4 text-center mt-4 mb-4 p-1 text-bg-secondary">
+                        Total Price = ${totalPrice}
+                    </div>
+                )}
+                <Footer />
+            </div>
+        </>
     );
 }
 
