@@ -40,7 +40,7 @@ function App() {
           {
             pages.map(({ path, element }) => <Route key={path} path={path} element={element} />)
           }
-          <Route path='Card' element={<ShoppingCard/>}/>
+          <Route path='Cart' element={<ShoppingCard/>}/>
           <Route path="*" element={<Error/>} />
         </Routes>
       </BrowserRouter>

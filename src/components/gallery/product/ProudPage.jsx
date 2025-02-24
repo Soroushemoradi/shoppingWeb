@@ -32,7 +32,7 @@ function ProudPage() {
       });
     }
     else{
-      toast.error("faild to add in card!",{
+      toast.error("faild to add in cart!",{
         position: 'top-left',
         autoClose: 2000,
         hideProgressBar: false,
@@ -61,7 +61,7 @@ function ProudPage() {
             className='btn border rounded-5'
             onClick={handleAddToCart}
           >
-            add to card <FontAwesomeIcon icon={faCartShopping} className='ms-3' />
+            add to cart <FontAwesomeIcon icon={faCartShopping} className='ms-3' />
           </button>
         </div>
       </div>

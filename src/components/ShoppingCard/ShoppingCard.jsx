@@ -69,7 +69,7 @@ function CartPage() {
                 </div>
             )}
             {cartItems.length !== 0 && (
-                <div className="w-25 border rounded-4 text-center mt-4 mb-4 p-1 text-bg-secondary">
+                <div className=" border rounded-4 text-center mt-4 mb-4 p-1 text-bg-secondary">
                     Total Price = ${totalPrice}
                 </div>
             )}

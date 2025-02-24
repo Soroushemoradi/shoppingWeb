@@ -29,7 +29,7 @@ function Navigation() {
           </div>
           <div>
             <Form inline className='d-flex'>
-              <Link className='btn border border-0 rounded-5 ' to={"Card"}><FontAwesomeIcon icon={faCartShopping} /></Link>
+              <Link className='btn border border-0 rounded-5 ' to={"Cart"}><FontAwesomeIcon icon={faCartShopping} /></Link>
               <button type='button' className=' border border-0 btn-search rounded-5' onClick={() => setSearch(!search)} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
               {search &&
                 <Form.Control
@@ -61,7 +61,7 @@ function Navigation() {
             </div>
           </div>
           <div className='gap-4 ms-5'>
-            <Link className='text-decoration-none text-secondary ms-2 font-weight-bold ' to={"Card"}>card</Link>
+            <Link className='text-decoration-none text-secondary ms-2 font-weight-bold ' to={"Cart"}>cart</Link>
             <div className='border w-75'></div>
           </div>
           <Form inline>
