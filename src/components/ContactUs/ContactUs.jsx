@@ -33,7 +33,7 @@ function ContactUs() {
                             <textarea className="form-control resize" rows="2" cols={2} placeholder="Enter your message"></textarea>
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="btn btn-primary mt-3">Send Message</button>
+                            <button type='button' className="btn btn-primary mt-3">Send Message</button>
                         </div>
                     </form>
                 </div>
